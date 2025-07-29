@@ -10,7 +10,8 @@ export function SocketProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // const scheme = window.location.protocol === 'https:' ? 'wss' : 'ws'
-    const ws = new WebSocket(`wss://bitchat-backend.onrender.com`)
+    // const ws = new WebSocket(`wss://CrypTalk.onrender.com`)
+    const ws = new WebSocket('https://cryptalk-backend-1.onrender.com')
     ws.onerror = () => toast.error("WebSocket error")
     setSocket(ws) 
   }, [])
